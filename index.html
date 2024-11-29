@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather App</title>
+
+    <!-- ....google fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- ...........style sheet...... -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="grid">
+
+        <div id="left">
+            <!-- ........left part........................ -->
+            <section class="box1">
+                <div class="container">
+                    <h1 class="heading">My Weather App</h1>
+                    <form>
+                        <input type="text" placeholder="Find Your City" autofocus>
+                        <button id="subBtn" role="button" type="submit">Find</button>
+                        <span class="msg"></span>
+                    </form>
+                </div>
+            </section>
+
+
+
+            <!-- ...........................................left end........................... -->
+        </div>
+
+        <div id="right">
+
+            <!-- ........right part........................ -->
+
+            <section class="citySection">
+                <div class="container">
+                    <ul class="cities"></ul>
+                </div>
+            </section>
+
+
+
+            <script src="index.js"></script>
+
+
+
+            <!-- ...........................................right end........................... -->
+        </div>
+
+
+
+    </div>
+
+    <div id="footer">
+        <h3>&copy made by Priyanuj</h3>         
+    </div>
+
+
+
+
+
+</body>
+
+</html>

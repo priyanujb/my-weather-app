@@ -1,0 +1,332 @@
+:root {
+
+    --text_light: rgb(253, 254, 227);
+    --text_med: #53627c;
+    --text_dark: #1e2432;
+    --red: #ff1e42;
+    --darkred: #c3112d;
+    --orange: #ff8c00;
+}
+
+
+body {
+    font: 1rem/1.3 "Montserrat", sans-serif;
+    background-image: url("back2.svg");
+    background-size: cover;    ;
+    color: black;
+    padding: 70px;
+}
+#grid {
+    display: grid;
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+#left {
+   
+    border-radius: 20px;
+    height: 80vh;
+    padding: 2%;
+    display: flex;
+}
+#left:hover{
+    background-color: rgb(141, 164, 254,0.1);
+}
+
+#right {
+    background-color: rgb(66, 142, 249,0.2);
+    border-radius: 20px;
+    
+}
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button,
+input {
+    border: none;
+    background: none;
+    outline: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* .........................SEARCH PART/...................... */
+.box1 {
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    width: 90%;
+    backdrop-filter: blur(50px);
+    margin: auto;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.02em;
+    padding: 0 0 30px 0;
+}
+
+.box1 form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.box1 form input {
+    font-size: 1.4rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+    border-bottom: 1px solid;
+}
+
+.box1 form input::placeholder {
+    color: currentColor;
+}
+
+.box1 form button {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 15px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background: var(--red);
+    transition: background 0.3s ease-in-out;
+}
+
+.box1 form button:hover {
+    background: var(--darkred);
+}
+
+.box1 form .msg {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    max-width: 450px;
+    min-height: 40px;
+}
+
+/* .............................Submit Buttopn............... */
+#subBtn {
+    align-items: center;
+
+    background-color: #fff;
+    border-radius: 24px;
+
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    /* will-change:transform, opacity; */
+    z-index: 0;
+}
+
+#subBtn:hover {
+    background: #93c3f4;
+    color: #000000;
+}
+
+/* ..................CITIES............................... */
+.citySection {
+    margin: 70px 0 20px;
+}
+
+.citySection .cities {
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.citySection .city {
+    text-align: center;
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--text_light);
+    color: var(--text_med);
+}
+
+.citySection .city::after {
+    content: '';
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 20px;
+    background: var(--text_light);
+}
+
+.figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.citySection .city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text_dark);
+}
+
+.citySection .city sup {
+    font-size: 0.5em;
+}
+
+.citySection .city-name sup {
+    padding: 0.2em 0.6em;
+    border-radius: 30px;
+    color: var(--text_light);
+    background: var(--orange);
+}
+
+.citySection .city-icon {
+    text-align: center;
+    border: 2px solid rgb(255, 242, 242);
+    background-color: #ebf5ff;
+    border-radius: 50%;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+
+
+
+/* MQ
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 1000px) {
+    body {
+        padding: 30px;
+    }
+
+    .citySection .cities {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .heading,
+    .citySection .city-temp {
+        font-size: 3rem;
+    }
+
+    .citySection {
+        margin-top: 20px;
+    }
+
+    .box1 form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .box1 form input,
+    .box1 form button {
+        width: 100%;
+    }
+
+    .box1 form button {
+        margin: 20px 0 0 0;
+    }
+
+    .box1 form .msg {
+        position: static;
+        max-width: none;
+        min-height: 0;
+        margin-top: 10px;
+    }
+
+    .citySection .cities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        padding: 15px;
+    }
+
+    .citySection .cities {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+#footer{
+    position: absolute;
+    bottom: 1%;
+    color: white;
+    font-family: Montserrat;
+    width: 200px;
+   
+
+    left: 45%;
+    right: 50%;
+
+}
